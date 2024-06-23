@@ -845,6 +845,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     categoryName: Attribute.String;
     categoryId: Attribute.String;
     color: Attribute.String;
+    slug: Attribute.UID<'api::category.category', 'categoryName'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -920,7 +921,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
         'plugin::encryptable-field.encryptable-field',
         {
           hint: 'Must Be code';
-          roles: ['1', '2', '3', 'id'];
+          roles: ['1', 'id'];
         }
       >;
     expiry: Attribute.Date;
@@ -975,6 +976,8 @@ export interface ApiProductTypeProductType extends Schema.CollectionType {
       'api::category.category'
     >;
     isHot: Attribute.Boolean & Attribute.DefaultTo<false>;
+    isBestSeller: Attribute.Boolean & Attribute.DefaultTo<false>;
+    typeId: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

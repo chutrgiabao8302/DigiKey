@@ -21,6 +21,10 @@
     },
     "color": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "categoryName"
     }
   }
 }

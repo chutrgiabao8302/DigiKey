@@ -21,8 +21,6 @@
         "hint": "Must Be code",
         "roles": [
           "1",
-          "2",
-          "3",
           "id"
         ]
       },

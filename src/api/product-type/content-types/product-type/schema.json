@@ -54,6 +54,13 @@
     "isHot": {
       "type": "boolean",
       "default": false
+    },
+    "isBestSeller": {
+      "type": "boolean",
+      "default": false
+    },
+    "typeId": {
+      "type": "string"
     }
   }
 }
